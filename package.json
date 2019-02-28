@@ -1,12 +1,12 @@
 {
-  "name": "LibraryDB",
+  "name": "Travlr",
   "version": "1.0.0",
-  "description": "Final Project for CS340",
+  "description": "CS361 Group Project",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Brian Metzger",
+  "author": "CS361 Group 28",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.13.3",
