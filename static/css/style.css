@@ -102,7 +102,17 @@ input[type=textarea] {
    width: 100%;
 }
 
+input[type=email] {
+   height: 30px;
+   width: 100%;
+}
+
 input[type=date] {
+   height: 30px;
+   width: 100%;
+}
+
+input[type=password] {
    height: 30px;
    width: 100%;
 }
@@ -145,6 +155,10 @@ select {
 .main-div a:hover {
    background-color: #4CAF50;
    color: white;
+}
+
+.center-button {
+	text-align: center;
 }
 
 button {

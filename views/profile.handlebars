@@ -1,3 +1,61 @@
-<h1>Travlr</h1>
+<h1>Add Username Here</h1>
 
-<p>Travlr provides trip recommendations to users based on preferences. Recommended trips included travel arrangements, accomodations and activities at the destination.</p>
+<h3>Current Trips:</h3>
+
+<div class="center-button"><button type="button" onclick="createTrip()">Create New Trip</button></div>
+
+<table>
+   <thead>
+      <th>Name</th>
+      <th>Destination</th>
+      <th>Departure Date</th>
+      <th>Description</th>
+      <th>Number of Activities</th>
+      <th>Options</th>
+   </thead>
+   <tbody id="data-table">
+      {{#if results}}
+         {{#each results}}
+            <tr id={{this.id}}>
+               <td>{{this.name}}</td>
+               <td>{{this.location}}</td>
+               <td>{{this.leaveDate}}</td>
+               <td>{{this.numActivities}}</td>
+               <td>
+                  <button type="button" onclick="editRow({{this.isbn}})">Edit</button>
+                  <button type="button" onclick="deleteRow({{this.isbn}})">Delete</button>
+               </td>
+            </tr>
+         {{/each}}
+      {{/if}}
+   </tbody>
+</table>
+
+<h3>Past Trips:</h3>
+<div class="center-button"><button type="button" onclick="createPTrip()">Create Past Trip</button></div>
+<table>
+   <thead>
+      <th>Name</th>
+      <th>Destination</th>
+      <th>Departure Date</th>
+      <th>Description</th>
+      <th>Number of Activities</th>
+      <th>Options</th>
+   </thead>
+   <tbody id="data-table">
+      {{#if Presults}}
+         {{#each Presults}}
+            <tr id={{this.id}}>
+               <td>{{this.name}}</td>
+               <td>{{this.location}}</td>
+               <td>{{this.leaveDate}}</td>
+               <td>{{this.numActivities}}</td>
+               <td>
+                  <button type="button" onclick="editPRow({{this.isbn}})">Edit</button>
+                  <button type="button" onclick="deletePRow({{this.isbn}})">Delete</button>
+               </td>
+            </tr>
+         {{/each}}
+      {{/if}}
+   </tbody>
+</table>

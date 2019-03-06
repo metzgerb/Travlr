@@ -1,3 +1,22 @@
-<h1>Travlr</h1>
+<h1>[ADD ITEM] Reviews</h1>
 
-<p>Travlr provides trip recommendations to users based on preferences. Recommended trips included travel arrangements, accomodations and activities at the destination.</p>
+<table>
+   <thead>
+      <th>Title</th>
+      <th>Review Date</th>
+      <th>Description</th>
+      <th>Author</th>
+   </thead>
+   <tbody id="data-table">
+      {{#if results}}
+         {{#each results}}
+            <tr id={{this.id}}>
+               <td>{{this.title}}</td>
+               <td>{{this.reviewDate}}</td>
+               <td>{{this.description}}</td>
+               <td>{{this.author}}</td>
+            </tr>
+         {{/each}}
+      {{/if}}
+   </tbody>
+</table>

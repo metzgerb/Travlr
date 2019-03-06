@@ -1,3 +1,103 @@
-<h1>Travlr</h1>
+<h1>[Trip Name]</h1>
 
-<p>Travlr provides trip recommendations to users based on preferences. Recommended trips included travel arrangements, accomodations and activities at the destination.</p>
+<h3>Flights</h3>
+
+<div class="center-button"><button type="button" onclick="addFlight()">Add Flight</button></div>
+
+<table>
+   <thead>
+      <th>Airline</th>
+      <th>Flight Number</th>
+	  <th>From</th>
+	  <th>To</th>
+      <th>Departure</th>
+      <th>Arrival</th>
+      <th>Price</th>
+      <th>Options</th>
+   </thead>
+   <tbody id="data-table">
+      {{#if Fresults}}
+         {{#each Fresults}}
+            <tr id={{this.id}}>
+               <td>{{this.airline}}</td>
+               <td>{{this.fNum}}</td>
+               <td>{{this.src}}</td>
+               <td>{{this.dest}}</td>
+			   <td>{{this.depart}}</td>
+               <td>{{this.arrive}}</td>
+               <td>{{this.price}}</td>
+               <td>
+                  <button type="button" onclick="editRow({{this.id}})">Edit</button>
+                  <button type="button" onclick="deleteRow({{this.id}})">Delete</button>
+               </td>
+            </tr>
+         {{/each}}
+      {{/if}}
+   </tbody>
+</table>
+
+<h3>Hotels</h3>
+
+<div class="center-button"><button type="button" onclick="addHotel()">Add Hotel</button></div>
+
+<table>
+   <thead>
+      <th>Hotel Name</th>
+      <th>Location</th>
+      <th>Check-in</th>
+      <th>Check-out</th>
+      <th>Number of Nights</th>
+	  <th>Price</th>
+      <th>Options</th>
+   </thead>
+   <tbody id="data-table">
+      {{#if Hresults}}
+         {{#each Hresults}}
+            <tr id={{this.id}}>
+               <td>{{this.hotel}}</td>
+               <td>{{this.location}}</td>
+               <td>{{this.checkin}}</td>
+               <td>{{this.checkout}}</td>
+			   <td>{{this.numNights}}</td>
+               <td>{{this.price}}</td>
+               <td>
+                  <button type="button" onclick="editRow({{this.id}})">Edit</button>
+                  <button type="button" onclick="deleteRow({{this.id}})">Delete</button>
+               </td>
+            </tr>
+         {{/each}}
+      {{/if}}
+   </tbody>
+</table>
+
+<h3>Activities</h3>
+
+<div class="center-button"><button type="button" onclick="addActivity()">Add Activity</button></div>
+
+<table>
+   <thead>
+      <th>Activity Name</th>
+      <th>Location</th>
+      <th>Start Time</th>
+      <th>Duration</th>
+      <th>Price</th>
+      <th>Options</th>
+   </thead>
+   <tbody id="data-table">
+      {{#if Aresults}}
+         {{#each Aresults}}
+            <tr id={{this.id}}>
+               <td>{{this.activity}}</td>
+               <td>{{this.location}}</td>
+               <td>{{this.startTime}}</td>
+               <td>{{this.duration}}</td>
+			   <td>{{this.price}}</td>
+               <td>
+                  <button type="button" onclick="editRow({{this.id}})">Edit</button>
+                  <button type="button" onclick="deleteRow({{this.id}})">Delete</button>
+               </td>
+            </tr>
+         {{/each}}
+      {{/if}}
+   </tbody>
+</table>

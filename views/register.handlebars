@@ -1,3 +1,55 @@
-<h1>Travlr</h1>
+<h1>Sign Up for Travlr</h1>
 
-<p>Travlr provides trip recommendations to users based on preferences. Recommended trips included travel arrangements, accomodations and activities at the destination.</p>
+<p>Fill out the form below to create an account</p>
+
+<form method="post" id="input-form">
+   <table class="form-table">
+      <thead></thead>
+      <tbody>
+         <tr>
+            <td>
+               <label for="fname">First Name: </label>
+            </td>
+            <td colspan="2">
+               <input type="text" id="formFname" name="fname"/>
+            </td>
+            <td>
+               <label for="lname">Last Name: </label>
+            </td>
+            <td colspan="2">
+               <input type="text" id="formLname" name="lname"/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <label for="phone">Email Address: </label>
+            </td>
+            <td colspan="4">
+               <input type="email" id="formEmail" name="email"/>
+            </td>
+         </tr>
+		 <tr>
+            <td>
+               <label for="password1">Password: </label>
+            </td>
+            <td colspan="4">
+               <input type="password" id="formPass1" name="password1"/>
+            </td>
+         </tr>
+		  <tr>
+            <td>
+               <label for="password2">Confirm Password: </label>
+            </td>
+            <td colspan="4">
+               <input type="password" id="formPass2" name="password2"/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="6" align="center">
+               <button id="formBtn" type="button">Register</button>
+               <button id="resetBtn" type="button">Reset</button>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</form>
