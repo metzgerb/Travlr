@@ -9,12 +9,16 @@
       <nav>
             <ul>
                <li><a class="nav-link" href="/">Home</a></li>
-               <li><a class="nav-link" href="/area1">area1</a></li>
-               <li><a class="nav-link" href="/area2">area2</a></li>
-               <li><a class="nav-link" href="/area3">area3</a></li>
-               <li><a class="nav-link" href="/area4">area4</a></li>
-               <li><a class="nav-link" href="/area5">area5</a></li>               
-            </ul>
+               <li><a class="nav-link" href="/about">About</a></li>
+			   {{#if user_auth}}
+                 <li><a class="nav-link" href="/profile">Profile</a></li>
+                 <li><a class="nav-link" href="/trips">Trips</a></li>
+                 <li><a class="nav-link" href="/reviews">Reviews</a></li>               
+			   {{else}}
+				 <li><a class="nav-link" href="/login">Login</a></li>
+				 <li><a class="nav-link" href="/register">Register</a></li>
+			   {{/if}}
+			</ul>
       </nav>
       <div>
          {{{body}}}

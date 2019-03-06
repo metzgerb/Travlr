@@ -20,8 +20,35 @@ app.get('/',function(req,res,next){
 	res.render('home');
 });
 
-app.post('/reader/checkout',function(req,res,next){ 
-	res.render('stuff');
+//render GET for about
+app.get('/about',function(req,res,next){    
+	res.render('about');
+});
+
+//render GET for login
+app.get('/login',function(req,res,next){ 
+	res.render('login');
+});
+
+//render GET for register
+app.get('/register',function(req,res,next){ 
+	res.render('register');
+});
+
+
+//render GET for profile
+app.get('/profile',function(req,res,next){ 
+	res.render('profile');
+});
+
+//render GET for trip
+app.get('/trip',function(req,res,next){ 
+	res.render('trip');
+});
+
+//render GET for review
+app.get('/review',function(req,res,next){ 
+	res.render('review');
 });
 
 app.use(function(req,res){
