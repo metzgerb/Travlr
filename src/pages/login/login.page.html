@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color=primary>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<form #loginForm="ngForm" (ngSubmit)="login()">
+		<ion-list inset>
+
+			<ion-item>
+				<ion-input type="text" placeholder="Email" name="email" [(ngModel)]="user.email"  required>
+				</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-input type="password" placeholder="Password" name="password" [(ngModel)]="user.password" required>
+				</ion-input>
+			</ion-item>
+		</ion-list>
+
+  		<div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+  		<ion-button class="submit" expand="block" type="submit" [disabled]="!loginForm.valid" type='submit'>
+            Login
+  		</ion-button>
+
+  		<ion-button expand="block" color="secondary" routerLink="/register" 
+          routeDirection="forward">   
+			Sign Up
+		</ion-button>
+
+
+
+	</form>
+
+</ion-content>

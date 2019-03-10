@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color=primary>
+  	<ion-buttons slot="start">
+  		<ion-back-button defaultHref="/login"></ion-back-button>
+  	</ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<form #loginForm="ngForm" (ngSubmit)="register()">
+		<ion-list inset>
+
+			<ion-item>
+				<ion-input type="text" placeholder="First name" name="firstname" [(ngModel)]="user.firstname" required>
+				</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-input type="text" placeholder="Last name" name="lastname" [(ngModel)]="user.lastname" required>
+				</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-input type="email" placeholder="Email" name="email" [(ngModel)]="user.email"  required>
+				</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-input type="password" placeholder="Password" name="password" [(ngModel)]="user.password" required>
+				</ion-input>
+			</ion-item>
+		</ion-list>
+
+  		<div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+  		<ion-button class="submit" expand="block" type="submit" [disabled]="!loginForm.valid" type='submit'>
+            Sign Up
+  		</ion-button>
+
+	</form>
+
+</ion-content>
