@@ -29,7 +29,8 @@ const routes: Routes = [
     path: 'profile', 
     canActivate: [AuthGuardService],
     loadChildren: '../pages/profile/profile.module#ProfilePageModule' 
-  }
+  },
+  { path: 'trip', loadChildren: '../pages/trip/trip.module#TripPageModule' }
 ];
 
 @NgModule({
