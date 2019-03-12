@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color=primary>
+    <ion-title>Activities</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+<h5>Pick activies you would like to do:</h5>
+		<form>
+		<ion-list inset>
+
+			<ion-item>
+				<ion-input type="text" placeholder="Activity" name="activity" required>
+				</ion-input>
+			</ion-item>
+		</ion-list>
+	</form>
+
+<div style="width: 50%; float: left"><ion-button expand="block" routerLink="/people" 
+          routeDirection="Back">Back</ion-button></div>
+
+ <div style="width: 50%; float: right"><ion-button expand="block" routerLink="/budget" 
+         routeDirection="forward">Next</ion-button></div>
+
+
+</ion-content>

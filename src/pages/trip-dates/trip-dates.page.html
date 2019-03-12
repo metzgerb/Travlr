@@ -1,0 +1,35 @@
+<ion-header>
+
+<ion-toolbar color=primary>
+<ion-title>Trip Dates</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+<h5>Pick the start and end date of your trip:</h5>
+		<form>
+		<ion-list inset>
+
+			<ion-item>
+				<ion-input type="datetime" placeholder="Start Date" name="startDate" required>
+				</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-input type="datetime" placeholder="End Date" name="endDate" required>
+				</ion-input>
+			</ion-item>
+		</ion-list>
+
+
+	</form>
+
+<div style="width: 50%; float: left"><ion-button expand="block" routerLink="/new-trip" 
+          routeDirection="Back">Back</ion-button></div>
+
+ <div style="width: 50%; float: right"><ion-button expand="block" routerLink="/destination" 
+         routeDirection="forward">Next</ion-button></div>
+
+
+</ion-content>
