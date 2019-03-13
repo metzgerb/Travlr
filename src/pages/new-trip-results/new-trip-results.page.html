@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color=primary>
+	<ion-buttons slot="start">
+	<ion-back-button defaultHref="/login"></ion-back-button>
+	</ion-buttons>
+	<ion-buttons slot="end">
+  		<ion-button routerLink="/home" routeDirection="Back">
+  			<ion-icon slot="icon-only" name="home"></ion-icon>
+  		</ion-button>
+		<ion-button routerLink="/profile" routeDirection="Back">
+  			<ion-icon slot="icon-only" name="person"></ion-icon>
+  		</ion-button>
+  	</ion-buttons>
+    <ion-title>New Trip Search Results</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+<h5>New Trip Search Criteria</h5>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Trip Name:</ion-label>
+        {{ mySearch.tripName }}
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Trip Dates:</ion-label>
+        {{ mySearch.startDate | date:'mediumDate' }} - {{ mySearch.endDate | date:'mediumDate' }}
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Destination:</ion-label>
+        {{ mySearch.destination }}
+      </ion-item>
+	        <ion-item>
+        <ion-label>Number of People:</ion-label>
+        {{ mySearch.people }}
+      </ion-item>
+	  
+	        <ion-item>
+        <ion-label>Activities:</ion-label>
+        {{ mySearch.activities }}
+      </ion-item>
+	  
+	        <ion-item>
+        <ion-label>Trip Budget:</ion-label>
+        {{ mySearch.minBudget | currency: 'USD':'symbol':'0.0-0' }} - {{ mySearch.maxBudget | currency: 'USD':'symbol':'0.0-0' }}
+      </ion-item>
+	  
+    </ion-list>
+
+	<h5>Trip Results</h5>
+	
+</ion-content>
