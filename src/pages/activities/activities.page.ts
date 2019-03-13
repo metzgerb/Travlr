@@ -12,7 +12,7 @@ export class ActivitiesPage implements OnInit {
 
   getTripActivities() {
      //get the trip name from form
-	 var activities = document.getElementById("activities").value;
+	 var activities = document.getElementById("activities").nodeValue;
      //call service function to set into service variable tripName
      this.mySearch.newTripActivities(activities);
   }

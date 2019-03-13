@@ -12,8 +12,8 @@ export class BudgetPage implements OnInit {
 
   getTripBudget() {
      //get the trip name from form
-	 var minBudget = document.getElementById("minBudget").value;
-	 var maxBudget = document.getElementById("maxBudget").value;
+	 var minBudget = document.getElementById("minBudget").nodeValue;
+	 var maxBudget = document.getElementById("maxBudget").nodeValue;
      //call service function to set into service variable tripName
      this.mySearch.newTripBudget(minBudget, maxBudget);
   }

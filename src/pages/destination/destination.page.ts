@@ -12,7 +12,7 @@ export class DestinationPage implements OnInit {
 
   getTripDestination() {
      //get the trip name from form
-	 var destination = document.getElementById("destination").value;
+	 var destination = document.getElementById("destination").nodeValue;
      //call service function to set into service variable tripName
      this.mySearch.newTripDestination(destination);
   }

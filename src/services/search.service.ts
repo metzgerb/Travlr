@@ -7,8 +7,8 @@ import { Injectable } from '@angular/core';
 export class SearchService {
   
   private tripName: string;
-  private startDate: datetime;
-  private endDate: datetime;
+  private startDate: Date;
+  private endDate: Date;
   private destination: string;
   private people: number;
   private activities: string;
