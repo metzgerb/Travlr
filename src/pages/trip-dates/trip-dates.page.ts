@@ -12,10 +12,10 @@ export class TripDatesPage implements OnInit {
 
   getTripDates() {
      //get the trip name from form
-	 var startDate = document.getElementById("startDate").value;
-	 var endDate = document.getElementById("endDate").value;
-     //call service function to set into service variable tripName
-     this.mySearch.newTripDates(startDate, endDate);
+	 // var startDate = document.getElementById("startDate").value;
+	 // var endDate = document.getElementById("endDate").value;
+  //    //call service function to set into service variable tripName
+  //    this.mySearch.newTripDates(startDate, endDate);
   }
   
   

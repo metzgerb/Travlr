@@ -31,7 +31,13 @@
 
       <ion-item>
         <ion-label>Trips</ion-label>
-        [To be added]
+
+        <ion-list>
+          <ion-item button [routerLink]="['/trip', trip.id]" *ngFor="let trip of trips"> 
+            {{ trip.tripName }} ( {{ trip.startDate }} - {{ trip.endDate }} )
+          </ion-item>
+        </ion-list>
+
       </ion-item>
 
       <ion-item>
@@ -39,6 +45,6 @@
         [To be added]
       </ion-item>
     </ion-list>
-	<ion-button expand="block" routerLink="/new-trip" 
+	<ion-button expand="block" routerLink="/trip" 
           routeDirection="forward">Create New Trip</ion-button>
 </ion-content>

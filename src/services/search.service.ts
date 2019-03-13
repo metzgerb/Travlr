@@ -1,19 +1,23 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, DocumentReference } from '@angular/fire/firestore';
+import { map, take } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { AuthService } from './auth.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class SearchService {
   
-  private tripName: string;
-  private startDate: datetime;
-  private endDate: datetime;
-  private destination: string;
-  private people: number;
-  private activities: string;
-  private minBudget: number;
-  private maxBudget: number;
+  public tripName: string;
+  public startDate: Date;
+  public endDate: Date;
+  public destination: string;
+  public people: number;
+  public activities: string;
+  public minBudget: number;
+  public maxBudget: number;
   
   constructor() {}
   
@@ -34,7 +38,7 @@ export class SearchService {
 	  this.people = peopleIn;
   }
   
-   newTripActivities(activitiesIn) {
+  newTripActivities(activitiesIn) {
 	  this.activities = activitiesIn;
   }
   

@@ -30,13 +30,21 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
     loadChildren: '../pages/profile/profile.module#ProfilePageModule' 
   },
-  { path: 'trip', loadChildren: '../pages/trip/trip.module#TripPageModule' },
+  { 
+    path: 'trip', 
+    loadChildren: '../pages/trip/trip.module#TripPageModule' 
+  },
+  { 
+    path: 'trip/:id', 
+    loadChildren: '../pages/trip/trip.module#TripPageModule' 
+  },
   { path: 'new-trip', loadChildren: '../pages/new-trip/new-trip.module#NewTripPageModule' },
   { path: 'trip-dates', loadChildren: '../pages/trip-dates/trip-dates.module#TripDatesPageModule' },
   { path: 'destination', loadChildren: '../pages/destination/destination.module#DestinationPageModule' },
   { path: 'people', loadChildren: '../pages/people/people.module#PeoplePageModule' },
   { path: 'activities', loadChildren: '../pages/activities/activities.module#ActivitiesPageModule' },
-  { path: 'budget', loadChildren: '../pages/budget/budget.module#BudgetPageModule' },  { path: 'new-trip-results', loadChildren: '../pages/new-trip-results/new-trip-results.module#NewTripResultsPageModule' }
+  { path: 'budget', loadChildren: '../pages/budget/budget.module#BudgetPageModule' },
+  { path: 'new-trip-results', loadChildren: '../pages/new-trip-results/new-trip-results.module#NewTripResultsPageModule' }
 
 
 

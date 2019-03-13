@@ -12,9 +12,9 @@ export class NewTripPage implements OnInit {
   
   getTripName() {
      //get the trip name from form
-	 var tripName = document.getElementById("tripName").value;
-     //call service function to set into service variable tripName
-     this.mySearch.newTripName(tripName);
+	 // var tripName = document.getElementById("tripName").value;
+  //    //call service function to set into service variable tripName
+  //    this.mySearch.newTripName(tripName);
   }
 	  
   
