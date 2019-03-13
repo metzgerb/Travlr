@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../../services/search.service'
 
 @Component({
   selector: 'app-people',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PeoplePage implements OnInit {
 
-  constructor() { }
+  constructor(private mySearch: SearchService) { }
+  
+  getTripPeople() {
+     //get the trip name from form
+	 var people = document.getElementById("people").value;
+     //call service function to set into service variable tripName
+     this.mySearch.newTripPeople(people);
+  }
 
   ngOnInit() {
   }

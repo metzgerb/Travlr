@@ -11,7 +11,7 @@
 		<ion-list inset>
 
 			<ion-item>
-				<ion-input type="text" placeholder="Location" name="location" required>
+				<ion-input type="text" placeholder="Location" id="destination" required>
 				</ion-input>
 			</ion-item>
 		</ion-list>
@@ -21,6 +21,6 @@
           routeDirection="Back">Back</ion-button></div>
 
  <div style="width: 50%; float: right"><ion-button expand="block" routerLink="/people" 
-         routeDirection="forward">Next</ion-button></div>
+         routeDirection="forward" (click)="getTripDestination()">Next</ion-button></div>
 
 </ion-content>

@@ -11,12 +11,12 @@
 		<ion-list inset>
 
 			<ion-item>
-				<ion-input type="number" placeholder="Minimum Budget" name="minBudget" required>
+				<ion-input type="number" placeholder="Minimum Budget" id="minBudget" required>
 				</ion-input>
 			</ion-item>
 
 			<ion-item>
-				<ion-input type="number" placeholder="Maximum Budget" name="maxBudget" required>
+				<ion-input type="number" placeholder="Maximum Budget" id="maxBudget" required>
 				</ion-input>
 			</ion-item>
 		</ion-list>
@@ -25,7 +25,7 @@
  <div style="width: 50%; float: left"><ion-button expand="block" routerLink="/activities" 
           routeDirection="Back">Back</ion-button></div>
 
- <div style="width: 50%; float: right"><ion-button expand="block" routerLink="/home" 
-         routeDirection="forward">Next</ion-button></div>
+ <div style="width: 50%; float: right"><ion-button expand="block" routerLink="/new-trip-results" 
+         routeDirection="forward" (click)="getTripBudget()">Next</ion-button></div>
 
 </ion-content>

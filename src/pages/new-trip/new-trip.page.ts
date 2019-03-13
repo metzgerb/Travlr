@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../../services/search.service'
 
 @Component({
   selector: 'app-new-trip',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewTripPage implements OnInit {
 
-  constructor() { }
+  constructor(private mySearch: SearchService) { }
+  
+  getTripName() {
+     //get the trip name from form
+	 var tripName = document.getElementById("tripName").value;
+     //call service function to set into service variable tripName
+     this.mySearch.newTripName(tripName);
+  }
+	  
+  
 
   ngOnInit() {
+
   }
 
+
+  
 }

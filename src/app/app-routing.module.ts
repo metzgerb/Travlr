@@ -36,7 +36,8 @@ const routes: Routes = [
   { path: 'destination', loadChildren: '../pages/destination/destination.module#DestinationPageModule' },
   { path: 'people', loadChildren: '../pages/people/people.module#PeoplePageModule' },
   { path: 'activities', loadChildren: '../pages/activities/activities.module#ActivitiesPageModule' },
-  { path: 'budget', loadChildren: '../pages/budget/budget.module#BudgetPageModule' }
+  { path: 'budget', loadChildren: '../pages/budget/budget.module#BudgetPageModule' },  { path: 'new-trip-results', loadChildren: '../pages/new-trip-results/new-trip-results.module#NewTripResultsPageModule' }
+
 
 
 

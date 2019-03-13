@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color=primary>
+    <ion-title>New Trip Search Results</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+<h5>New Trip Search Criteria</h5>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Trip Name:</ion-label>
+        {{ mySearch.tripName }}
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Trip Dates:</ion-label>
+        {{ mySearch.startDate }} - {{ mySearch.endDate }}
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Destination:</ion-label>
+        {{ mySearch.destination }}
+      </ion-item>
+	        <ion-item>
+        <ion-label>Number of People:</ion-label>
+        {{ mySearch.people }}
+      </ion-item>
+	  
+	        <ion-item>
+        <ion-label>Activities:</ion-label>
+        {{ mySearch.activities }}
+      </ion-item>
+	  
+	        <ion-item>
+        <ion-label>Trip Budget:</ion-label>
+        {{ mySearch.minBudget }} - {{ mySearch.maxBudget }}
+      </ion-item>
+	  
+    </ion-list>
+
+	<h5>Trip Results</h5>
+	
+</ion-content>

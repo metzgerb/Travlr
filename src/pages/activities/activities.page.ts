@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../../services/search.service'
 
 @Component({
   selector: 'app-activities',
@@ -7,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivitiesPage implements OnInit {
 
-  constructor() { }
+  constructor(private mySearch: SearchService) { }
 
+  getTripActivities() {
+     //get the trip name from form
+	 var activities = document.getElementById("activities").value;
+     //call service function to set into service variable tripName
+     this.mySearch.newTripActivities(activities);
+  }
+  
   ngOnInit() {
   }
 
