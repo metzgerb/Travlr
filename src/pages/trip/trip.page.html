@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="primary">
+	<ion-buttons slot="start">
+	  <ion-back-button defaultHref="/"></ion-back-button>
+	</ion-buttons>
+	<ion-title *ngIf="!trip.id">New Trip</ion-title>
+	<ion-title *ngIf="trip.id">Your Trip</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-item>
+		<ion-label position="stacked">Trip Name</ion-label>
+		<ion-input [(ngModel)]="trip.tripName"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="stacked">Trip Location</ion-label>
+		<ion-input [(ngModel)]="trip.destination"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="stacked">Trip Description</ion-label>
+		<ion-textarea [(ngModel)]="trip.description"></ion-textarea>
+	</ion-item>
+	<ion-item>
+		<ion-label position="stacked">Trip Minimum Budget</ion-label>
+		<ion-input [(ngModel)]="trip.minBudget"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="stacked">Trip Maximum Budget</ion-label>
+		<ion-input [(ngModel)]="trip.maxBudget"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="stacked">Trip Number of People</ion-label>
+		<ion-input [(ngModel)]="trip.people"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="stacked">Trip Activities</ion-label>
+		<ion-input [(ngModel)]="trip.activities"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="stacked">Trip Start Date</ion-label>
+		<ion-datetime [(ngModel)]="trip.startDate" display-format="MMMM DD YYYY"></ion-datetime>
+	</ion-item>
+	<ion-item>
+		<ion-label position="stacked">Trip End Date</ion-label>
+		<ion-datetime [(ngModel)]="trip.endDate" display-format="MMMM DD YYYY"></ion-datetime>
+	</ion-item>
+
+</ion-content>
+
+<ion-footer *ngIf="!trip.id">
+  <ion-toolbar color="success">
+    <ion-button expand="full" fill="clear" color="light" (click)="addTrip()">
+      <ion-icon name="checkmark" slot="start"></ion-icon>
+      Add Trip
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
+ 
+<ion-footer *ngIf="trip.id">
+  <ion-row no-padding text-center>
+    <ion-col size="6">
+      <ion-button expand="block" fill="outline" color="danger" (click)="deleteTrip()">
+        <ion-icon name="trash" slot="start"></ion-icon>
+        Delete
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button expand="block" fill="solid" color="success" (click)="updateTrip()">
+        <ion-icon name="save" slot="start"></ion-icon>
+        Update
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

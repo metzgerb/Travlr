@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color=primary>
+    <ion-title>New Trip</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<h5>Enter a name for your trip:</h5>
+		<form>
+		<ion-list inset>
+
+			<ion-item>
+				<ion-input type="text" placeholder="Trip Name" id="tripName" required>
+				</ion-input>
+			</ion-item>
+		</ion-list>
+
+
+	</form>
+
+
+      
+<div style="width: 50%; float: left"><ion-button expand="block" routerLink="/home" 
+          routeDirection="Back">Back</ion-button></div>
+
+ <div style="width: 50%; float: right"><ion-button expand="block" routerLink="/trip-dates" 
+         routeDirection="forward" (click)="getTripName()">Next</ion-button></div>
+
+</ion-content>

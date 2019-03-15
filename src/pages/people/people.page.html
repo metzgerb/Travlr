@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color=primary>
+    <ion-title>People</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<h5>Choose number of people:</h5>
+		<form>
+		<ion-list inset>
+
+			<ion-item>
+				<ion-input type="number" placeholder="Number of People" id="people" required>
+				</ion-input>
+			</ion-item>
+		</ion-list>
+	</form>
+
+
+ <div style="width: 50%; float: left"><ion-button expand="block" routerLink="/destination" 
+          routeDirection="Back">Back</ion-button></div>
+
+ <div style="width: 50%; float: right"><ion-button expand="block" routerLink="/activities" 
+         routeDirection="forward" (click)="getTripPeople()">Next</ion-button></div>
+
+</ion-content>
