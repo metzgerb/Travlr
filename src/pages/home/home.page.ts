@@ -64,8 +64,4 @@ export class HomePage {
   }
  
   ngOnInit() { }
-
-  logout() {
-    this.auth.logout();
-  }
 }

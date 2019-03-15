@@ -1,50 +1,54 @@
 <ion-header>
   <ion-toolbar color=primary>
   	<ion-buttons slot="end">
-  		<ion-button (click)="logout()">
+      <ion-button routerLink="/profile">
+        
+        <ion-label>{{user.firstname}} {{user.lastname}}</ion-label>
+        <ion-icon name="contact" style="padding-left: 5px;"></ion-icon>
+      </ion-button>
+<!--   		<ion-button (click)="logout()">
   			<ion-icon slot="icon-only" name="log-out"></ion-icon>
-  		</ion-button>
+  		</ion-button> -->
   	</ion-buttons>
     <ion-title>
-      Home
+      <ion-icon name="boat" style="vertical-align: middle;"></ion-icon> Travlr
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-	<h1>Travlr</h1>
+  <ion-slides startAutoplay pager style="height: 200px;">
+      <ion-slide>
+        <ion-img src="https://images.unsplash.com/photo-1487349384428-12b47aca925e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="https://images.unsplash.com/photo-1496046744122-2328018d60b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1064&q=80"></ion-img>
+      </ion-slide>
+    </ion-slides>  
   
-  <h5>
-  	Travlr provides trip recommendations to users based on preferences. Recommended trips included travel arrangements, accomodations and activities at the destination.
+  <h5 style="text-align: center;">
+  	Travlr provides trip recommendations to users based on preferences. <br />
+    Recommended trips included travel arrangements, accomodations and activities at the destination.
 	</h5>
 
+      <ion-item-divider color="primary">
+        <ion-label>
+          <p style="font-weight: bold; font-size: 20px;">Your Trips</p>
+        </ion-label>
+      </ion-item-divider>
     <ion-list>
-      <ion-item>
-        <ion-label>User:</ion-label>
-        {{user.firstname}} {{user.lastname}}
-      </ion-item>
-
-      <ion-item routerLink="/profile">
-        <ion-label>Your Profile</ion-label>
-        <ion-icon md="md-arrow-forward"></ion-icon>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Trips</ion-label>
-
-        <ion-list>
-          <ion-item button [routerLink]="['/trip', trip.id]" *ngFor="let trip of trips"> 
-            {{ trip.tripName }} ( {{ trip.startDate }} - {{ trip.endDate }} )
-          </ion-item>
-        </ion-list>
+      <ion-item button [routerLink]="['/trip', trip.id]" *ngFor="let trip of trips" detail="false"> 
+        {{ trip.tripName }} <ion-icon name="arrow-forward" slot="end"></ion-icon>
 
       </ion-item>
-
-      <ion-item>
-        <ion-label>Reviews</ion-label>
-        [To be added]
-      </ion-item>
+      <ion-item-divider color="primary">
+        <ion-label>
+          <p style="font-weight: bold; font-size: 20px;">Your Reviews [To be added]</p>
+        </ion-label>
+      </ion-item-divider>
     </ion-list>
-	<ion-button expand="block" routerLink="/trip" 
-          routeDirection="forward">Create New Trip</ion-button>
+	<ion-button expand="block" routerLink="/trip" routeDirection="forward" color="success">Create New Trip</ion-button>
 </ion-content>

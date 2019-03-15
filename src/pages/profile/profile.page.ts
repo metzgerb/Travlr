@@ -15,7 +15,7 @@ export class ProfilePage implements OnInit {
 	user: User;
 
 	constructor(
-		private auth: AuthService,
+		  private auth: AuthService,
     	private userService: UserService,
 	) {
       this.uid = this.auth.user;
@@ -35,6 +35,10 @@ export class ProfilePage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  logout() {
+    this.auth.logout();
   }
 
 }

@@ -3,7 +3,8 @@
 	<ion-buttons slot="start">
 	  <ion-back-button defaultHref="/"></ion-back-button>
 	</ion-buttons>
-	<ion-title>Trip</ion-title>
+	<ion-title *ngIf="!trip.id">New Trip</ion-title>
+	<ion-title *ngIf="trip.id">Your Trip</ion-title>
   </ion-toolbar>
 </ion-header>
 
